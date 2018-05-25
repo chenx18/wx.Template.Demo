@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<view class='page'>
+  <view class='page_bd'>
+    <map class='map' id='myMap' longitude='{{longitude}}' latitude='{{latitude}}' 
+    scale='{{scale}}' markers='{{markers}}' polyline='{{polyline}}' show-location='true'  style="height:{{hasDevice?'800':screenH*2}}rpx"></map>
+  </view>
+  <view class='page_ft'></view>
+</view>

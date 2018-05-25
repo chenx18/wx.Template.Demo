@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+.map {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.h800 {
+  height: 800rpx;
+}

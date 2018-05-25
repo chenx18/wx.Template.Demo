@@ -1,0 +1,50 @@
+<!--pages/my/my.wxml-->
+<view class="page" style="min-height:{{screenHeight}}px;">
+<!-- 个人信息 -->
+  <view class="my-nav">
+    <view class="nav-image">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="my-name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+  <!-- 关于内容 -->
+  <view class="my-content">
+    <block wx:for="{{contents}}" wx:key="text">
+      <view class="content-item"  >
+        <view class="item-icon">{{item.icon}}</view>
+        <view class="item-text clearfix">
+          <text class="text-lt">{{item.text}}</text>
+          <text class="iconfont icon-youjiantou text-rt f-r"></text>
+        </view>
+      </view>
+    </block>
+  </view> 
+
+  <!-- 关于合作 -->
+  <view class="my-content">
+    <block wx:for="{{abouts}}" wx:key="text">
+      <view class="content-item"  >
+        <view class="item-icon">{{item.icon}}</view>
+        <view class="item-text clearfix">
+          <text class="text-lt">{{item.text}}</text>
+          <text class="iconfont icon-youjiantou text-rt f-r"></text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 授权 -->
+  <view class="user-show" wx:if="{{hasUserInfo}}">
+    <view class="show-box">
+      <view class="box-title"> 用户未授权</view>
+      <view class="box-cont">
+        如需正常使用，请按确认并在授权!
+      </view>
+      <view class="box-btn">
+        <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo='onGetUserInfo' bindtap='getUser'>确定</button>
+      </view>
+    </view>
+  </view>
+</view>

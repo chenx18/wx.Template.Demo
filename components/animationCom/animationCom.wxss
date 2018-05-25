@@ -1,0 +1,16 @@
+/* components/animationCom/animationCom.wxss */
+.box {
+  width: 100%;
+  height: 500rpx;
+  margin: 0 auto;
+}
+.ani {
+  width: 500rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  background-color: red;
+  color: #fff;
+  line-height: 200rpx;
+  text-align: center;
+  
+}

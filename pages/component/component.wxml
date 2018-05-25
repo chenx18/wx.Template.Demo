@@ -1,0 +1,36 @@
+<!--pages/component/component.wxml-->
+<view class="page">
+
+  <view class="page_bd weui-btn-area" >
+    <!-- 组件A -->
+     <button class="weui-btn" type="primary" bindtap="showPopUp">弹窗组件(popUp)</button> 
+
+    <!-- 组件B -->
+     <button class="weui-btn" type="warn" bindtap="openAnimation">动画组件（animation）</button> 
+
+    <button class="weui-btn" type="default" >下拉刷新试试（onPullDownRefresh）</button>
+
+    
+  </view>
+
+  <view> </view>
+</view>
+<!-- 弹窗组件 -->
+<pop-up-component id="popUp" 
+title="提示" 
+content="我是一个弹窗" 
+cancelText="关闭" 
+confirmText="确定" 
+bind:cancelEvent="cancel" 
+bind:confirmEvent="confirm"> 
+<view slot="contents">
+    <view>ID:12456644</view>
+    <view>Name: 我是一个弹窗</view>
+    <view>Hello word!</view>
+    <view>饿了吗！</view>
+</view>
+</pop-up-component>
+
+<!-- 动画组件 -->
+<!-- 通过id选择器找到animation-com实例 -->
+<animation-com id="animation" bind:showEvent="openAnimation"></animation-com>

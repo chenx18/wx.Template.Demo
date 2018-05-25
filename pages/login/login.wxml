@@ -1,0 +1,32 @@
+<!--pages/login/login.wxml-->
+  <!-- page 根组件 -->
+<view class="page">
+  <!-- 页头 page_hd-->
+  <!-- <view class="page_hd">
+    <view class="page_title">WeUI</view>
+  </view> -->
+  <!-- 主体 page_bd -->
+  <view class="page_bd">
+    <form class="form_login" report-submit="true" bindsubmit="formSubmit" >
+      <view class="user_name">
+        <input type='text' placeholder="请输入账户/设备号/昵称/手机号" maxlength='32' bindblur="bindName" name="userName" value="{{userName}}"></input>
+      </view>
+      <view class="user_pwd">
+        <input type='password' placeholder="密码" bindblur="bindPassword" maxlength='32' name="userPassword" value="{{userPassword}}"></input>
+      </view>
+      <view class="login_btn button-sp-area">
+        <button class="login_btn weui-btn "  form-type="submit" plain="true" >登入</button>
+        <button plain="true" open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfoClick'>获取授权</button>
+      </view>
+    </form>
+    <!-- 扫描登入 -->
+    <view class="login_footer" bindtap="qrCode">
+      <text>扫描登入</text>
+    </view>
+    <!-- 提示弹窗 -->
+    <view class="cue {{cueShow?'cueShow':'cueHidde'}}">
+      <text class="cue-text">{{cueText}}</text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pop-up-component": "/components/popUp/popUp",
+    "animation-com": "/components/animationCom/animationCom"
+  },
+  "enablePullDownRefresh": true
+}

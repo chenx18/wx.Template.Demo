@@ -1,0 +1,87 @@
+/* pages/home/home.wxss */
+.home-nav {
+  width: 100%;
+  height: 320rpx;
+  overflow: hidden;
+}
+.swiper-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 格子导航 */
+.home-grid {
+  width: 100%;
+  padding: 10rpx 0;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:30rpx;
+}
+ .grid-tiem {
+  width: 25%;
+  margin-bottom: 10rpx;
+} 
+.item-icon {
+  width: 85rpx;
+  height: 85rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: pink;
+  display: block; 
+}
+.item-title {
+  display: block;
+  color: #398dee;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+/*今日推荐*/
+.home-today {
+  padding: 0 40rpx;
+}
+.today-title {
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  border-bottom: 1rpx solid #ccc;
+   font-size: 26rpx; 
+}
+.title-lt {
+  color: #333;
+  float: left;
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+.title-rt {
+  color: #ccc;
+  float: right;
+}
+
+.today-cont {
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; 
+}
+.today-cont-item {
+  width: 50%;
+  padding:10rpx;
+  margin-bottom: 20rpx;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.cont-item-img {
+  width: 100%;
+  height: 250rpx;
+  overflow: hidden;
+}
+.cont-item-img image {
+  width: 100%;
+  height: 100%;
+}
+.cont-item-title {
+  font-size: 34rpx;
+  text-align: center;
+  display: block;
+}

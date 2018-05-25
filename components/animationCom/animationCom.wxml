@@ -1,0 +1,4 @@
+<!--components/animationCom/animationCom.wxml-->
+<view class="box" hidden="{{isShow}}">
+  <view animation="{{animationData}}" class='ani'>大吉大利，今晚吃鸡！</view>
+</view>

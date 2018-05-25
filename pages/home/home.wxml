@@ -1,0 +1,39 @@
+<!-- nav轮播 -->
+<swiper class="home-nav"
+indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrl}}" wx:key="url"  >
+    <swiper-item class="nav-swiper">
+      <image class="swiper-img" src="{{item.url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 导航栏 -->
+<view class="home-grid">
+  <block wx:for="{{grids}}" wx:key ="title" >
+    <view class="grid-tiem">
+      <text class="item-icon"></text>
+      <text class="item-title">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+
+<!--今日推荐  -->
+<view class="home-today">
+  <view class="today-title clearfix">
+    <text class="title-lt"> 今日推荐</text>
+    <text class="title-rt">》</text>
+  </view>
+
+  <view class="today-cont">
+    <view class="today-cont-item" wx:for="{{imgUrl}}" wx:key="url" wx:for-index="idx" wx:for-item="today">
+      <view class="cont-item-img">
+        <image src="{{today.url}}"></image>
+      </view>
+      <view class="cont-item-title">
+        {{today.title}}
+      </view>
+    </view>
+  </view>
+</view>
+

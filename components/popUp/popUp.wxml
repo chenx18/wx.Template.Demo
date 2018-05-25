@@ -1,0 +1,13 @@
+<!-- 自定义组件模板 -->
+<!-- 注：在组件中不能使用ID选择器、标签选择器和属性选择器 -->
+<view class='wx_dialog_container' hidden="{{isShow}}">
+    <view class='wx-mask'></view>
+    <view class='wx-dialog'>
+        <view class='wx-dialog-title'>{{ title }}</view>
+        <slot name="contents"></slot>
+        <view class='wx-dialog-footer'>
+          <view class='wx-dialog-btn' bindtap='_cancelEvent'>{{cancelText}}</view>
+          <view class='wx-dialog-btn' bindtap='_confirmEvent'>{{confirmText}}</view>
+        </view>
+    </view>
+</view>

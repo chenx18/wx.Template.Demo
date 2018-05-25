@@ -1,0 +1,5 @@
+<!--pages/promise/promise.wxml-->
+
+<view>
+  <button bindtap="close">close</button>
+</view>
