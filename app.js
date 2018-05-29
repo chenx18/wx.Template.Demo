@@ -11,15 +11,14 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // 
         console.log(res.code);
         if(res.code) {
-          wx.request({
-            url: 'https://test.com/onLogin',
-            data: {
-              code: res.code
-            }
-          })
+          // wx.request({
+          //   url: '',
+          //   data: {
+          //     code: res.code
+          //   }
+          // })
         }else {
           console.log('登入失败');
         }

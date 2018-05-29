@@ -16,7 +16,7 @@
       </view>
       <view class="login_btn button-sp-area">
         <button class="login_btn weui-btn "  form-type="submit" plain="true" >登入</button>
-        <button plain="true" open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfoClick'>获取授权</button>
+        <!-- <button plain="true" open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfoClick'>获取授权</button> -->
       </view>
     </form>
     <!-- 扫描登入 -->

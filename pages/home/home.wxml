@@ -1,9 +1,10 @@
 <!-- nav轮播 -->
 <swiper class="home-nav"
 indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrl}}" wx:key="url"  >
+  <block wx:for="{{bannerData}}" wx:key="url"  >
     <swiper-item class="nav-swiper">
-      <image class="swiper-img" src="{{item.url}}"></image>
+      <image class="swiper-img" src="{{item.thumbnail_pic_s}}"></image>
+      <text> {{item.title}}</text>
     </swiper-item>
   </block>
 </swiper>

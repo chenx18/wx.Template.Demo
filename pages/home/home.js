@@ -1,8 +1,9 @@
 // pages/home/home.js
-
 import HttpService from '../../es6/es6-class.js';
 import { n1, n2, n3, n4, getClassName } from '../../es6/es6-module.js';
 import fn from '../../es6/es6-module.js';
+
+import HttpsGet from '../../services/httpServices.js'
 
 Page({
 
@@ -11,6 +12,17 @@ Page({
    */
   data: {
     // 轮播
+    bannerData: [
+      {
+        uniquekey: 'erwee2354235235aewawr3ref',
+        title: "治安倍只服普京！“秋田犬外交”失灵 日本首相苦等48分钟",
+        date: "2018-05-29 16:36",
+        category: "头条",
+        author_name: "央视网",
+        url: "http://mini.eastday.com/mobile/180529163612611.html",
+        thumbnail_pic_s: "../../assets/images/banner/banner_01.png",
+      }
+    ],
     imgUrl: [
       {
         url: "../../assets/images/banner/banner_01.png",
@@ -55,24 +67,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     let aa = HttpService.getBanner();
     console.log(aa);
-
     // console.log --> module
     console.log(n1);
     console.log(n2);
     console.log(n3);
     console.log(n4);
-
     // 使用 as 关键字；
     let className = getClassName.className();
     console.log(className);
-
     // 使用export default 
     let pluss = fn.plus(3,5);
     console.log(pluss);
-  
+
+    HttpsGet.getBanner()
+      .then((res) => {
+        console.log(res);
+        let resArry = res.data.result.data.slice(1,6);
+        this.setData({
+          bannerData: resArry
+        })
+      })
   },
 
   /**
@@ -89,6 +105,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
   
   },
 
