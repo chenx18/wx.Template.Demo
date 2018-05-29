@@ -1,6 +1,8 @@
 // pages/home/home.js
 
-import HttpService from '../../services/es6-class.js';
+import HttpService from '../../es6/es6-class.js';
+import { n1, n2, n3, n4, getClassName } from '../../es6/es6-module.js';
+import fn from '../../es6/es6-module.js';
 
 Page({
 
@@ -53,8 +55,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     let aa = HttpService.getBanner();
     console.log(aa);
+
+    // console.log --> module
+    console.log(n1);
+    console.log(n2);
+    console.log(n3);
+    console.log(n4);
+
+    // 使用 as 关键字；
+    let className = getClassName.className();
+    console.log(className);
+
+    // 使用export default 
+    let pluss = fn.plus(3,5);
+    console.log(pluss);
   
   },
 
