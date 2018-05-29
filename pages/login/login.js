@@ -28,9 +28,11 @@ Page({
     } else {
       console.log('这里是login')
     }
+    
   
   },
-  // 监听用户名输入框失去焦点
+  // 监听用户名输入框失去焦点 
+
   bindName(e) {
     console.log(e.detail.value);
     let _cueShow = false;

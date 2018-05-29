@@ -1,4 +1,7 @@
 // pages/home/home.js
+
+import HttpService from '../../services/es6-class.js';
+
 Page({
 
   /**
@@ -50,6 +53,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let aa = HttpService.getBanner();
+    console.log(aa);
   
   },
 
